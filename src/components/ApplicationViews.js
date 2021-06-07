@@ -1,4 +1,7 @@
 import { Route } from "react-router"
+import { EmployeeForm } from "./employee/EmployeeForm"
+import { EmployeeList } from "./employee/EmployeeList"
+import { EmployeeProvider } from "./employee/EmployeeProvider"
 import { LandingPage } from "./landing/LandingPage"
 import { LocationList } from "./location/LocationList"
 import { LocationProvider } from "./location/LocationProvider"
@@ -27,6 +30,19 @@ export const ApplicationViews = () => {
                     <ProductList />
                 </Route>
             </ProductProvider>
+
+            {/* RENDER EMPLOYEES */}
+            <EmployeeProvider>
+                <LocationProvider>
+                    <Route exact path="/employees">
+                        <EmployeeList />
+                    </Route>
+
+                    <Route exact path="/employees/create">
+                        <EmployeeForm />
+                    </Route>
+                </LocationProvider>
+            </EmployeeProvider>
 
         </>
     )

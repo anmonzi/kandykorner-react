@@ -1,17 +1,22 @@
-.products {
+.employees {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   
-  .product {
+  .employee {
       flex-basis: 45%;
       margin: 1em;
       padding: 1em;
       border: 1px solid goldenrod;
   }
 
-  .products__title {
+  .employees__title {
       margin-top: 3rem;
       text-align: center;
+  }
+
+  .employee_flex {
+      display: flex;
+      justify-content: center;
   }
