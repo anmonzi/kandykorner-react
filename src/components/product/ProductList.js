@@ -21,10 +21,10 @@ export const ProductList = () => {
                                 Product Name: {product.name}
                             </div>
                             <div className="product__price">
-                                Price: {product.price}
+                                Price: ${product.price}
                             </div>
                             <div className="product__type">
-                                Type: {product.productType.productType}
+                                Type: {product.productType.type}
                             </div>
                         </div>
                     )

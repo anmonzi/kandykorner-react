@@ -3,6 +3,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  .locations__title {
+      text-align: center;
+  }
   
   .location {
       flex-basis: 45%;

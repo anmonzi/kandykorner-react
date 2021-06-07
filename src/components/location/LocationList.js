@@ -12,21 +12,24 @@ export const LocationList = () => {
 
 
     return (
-        <section className="locations">
-            {
-                locations.map(location => {
-                    return (
-                        <div className="location" id={`location--${location.id}`}>
-                            <div className="location__name">
-                                Name: {location.name}
+        <>
+            <h1 className="locations__title">Current Locations</h1>
+            <section className="locations">
+                {
+                    locations.map(location => {
+                        return (
+                            <div className="location" id={`location--${location.id}`}>
+                                <div className="location__name">
+                                    Name: {location.name}
+                                </div>
+                                <div className="location__address">
+                                    Address: {location.address}
+                                </div>
                             </div>
-                            <div className="location__address">
-                                Address: {location.address}
-                            </div>
-                        </div>
-                    )
-                })
-            }
-        </section>
+                        )
+                    })
+                }
+            </section>
+        </>
     )
 }
