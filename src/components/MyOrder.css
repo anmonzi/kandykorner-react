@@ -1,0 +1,17 @@
+.myOrders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .customerCandy {
+      flex-basis: 45%;
+      margin: 1em;
+      padding: 1em;
+      border: 1px solid goldenrod;
+  }
+
+  .myOrder__title {
+      margin-top: 3rem;
+      text-align: center;
+  }

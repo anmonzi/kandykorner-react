@@ -13,9 +13,7 @@ export const EmployeeList = () => {
         getEmployees()
     }, [])
 
-    //const isManager = employee.manager
-    //const isFullTime = employee.isFullTime
-
+    
     return (
         <>
             <h1 className="employees__title">Current Employees</h1>

@@ -19,6 +19,12 @@ export const NavBar = (props) => {
                 <Link className="navbar__link" to="/employees">Employees</Link>
             </li>
             <li className="navbar__item">
+                <Link className="navbar__link" to="/customers">Customers</Link>
+            </li>
+            <li className="navbar__item">
+                <Link className="navbar__link" to="/my-orders">My Order</Link>
+            </li>
+            <li className="navbar__item">
                 <Link className="navbar__link" onClick={
                     (event) => {
                         localStorage.removeItem("kandy_customer")
