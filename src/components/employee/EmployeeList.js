@@ -36,10 +36,18 @@ export const EmployeeList = () => {
                                 Works at: { employee.location.name }
                             </div>
                             <div className="employee__position">
-                                Is a manager: { employee.manager }
+                                Is a manager: { 
+                                    employee.manager
+                                    ? "Yes"
+                                    : "No"
+                                    }
                             </div>
                             <div className="employee__fullTime">
-                                Works Full-Time: { employee.fullTime}
+                                Works Full-Time: { 
+                                    employee.fullTime
+                                    ? "Yes"
+                                    : "No"
+                                    }
                             </div>
                             <div className="employee__hourlyRate">
                                 { employee.name } makes ${ employee.hourlyRate } an hour

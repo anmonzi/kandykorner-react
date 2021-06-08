@@ -15,8 +15,8 @@ export const EmployeeForm = () => {
     const [employee, setEmployee] = useState({  // holds data -establishes the variable to hold state - any time state changes JSX is re-rendered
         name: "",
         locationId: 0,
-        manager: "",
-        fullTime: "",
+        manager: false,
+        fullTime: false,
         hourlyRate: 0
     })
 
@@ -34,15 +34,20 @@ export const EmployeeForm = () => {
     const handleClickSaveEmployee = (event) => {
         event.preventDefault()
 
+        const locationId = parseInt(employee.locationId)
+        const hourlyRate = parseInt(employee.hourlyRate)
+        const manager = employee.manager
+        const fullTime = employee.fullTime
+
         if (parseInt(employee.locationId) === 0) {
             alert("Please select a location")
         } else {
             const newEmployee = {
                 name: employee.name,
-                locationId: parseInt(employee.locationId),
-                manager: employee.manager,
-                fullTime: employee.fullTime,
-                hourlyRate: employee.hourlyRate
+                locationId: locationId,
+                manager: manager,
+                fullTime: fullTime,
+                hourlyRate: hourlyRate
             }
             addEmployee(newEmployee)
                 .then(() => history.push("/employees"))
@@ -60,14 +65,22 @@ export const EmployeeForm = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-            <label htmlFor="manager">Is Employee a manager?</label>
-            <input type="text" id="manager" required autoFocus className="form-control" placeholder="Yes or No" value={employee.manager} onChange={handleUserInputChange} />
+            <label htmlFor="manager">Manager: </label>
+            <select name="manager" id="manager" className="form-control" value={employee.manager} onChange={handleUserInputChange}>
+                        <option value="0">Select an option</option>
+                        <option key={true} value={true}>Yes</option>
+                        <option key={false} value={false}>No</option>
+                    </select>
             </div>
         </fieldset>
         <fieldset>
             <div className="form-group">
-            <label htmlFor="fullTime">Is Employee Full Time?</label>
-            <input type="text" id="fullTime" required autoFocus className="form-control" placeholder="Yes or No" value={employee.fullTime} onChange={handleUserInputChange} />
+            <label htmlFor="fullTime">Full-Time: </label>
+            <select name="fullTime" id="fullTime" className="form-control" value={employee.fullTime} onChange={handleUserInputChange}>
+                        <option value="0">Select an option</option>
+                        <option key={true} value={true}>Yes</option>
+                        <option key={false} value={false}>No</option>
+                    </select>
             </div>
         </fieldset>
         <fieldset>

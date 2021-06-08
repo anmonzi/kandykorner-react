@@ -19,14 +19,14 @@ export const ApplicationViews = () => {
 
             {/* RENDER LOCATIONS */}
             <LocationProvider>
-                <Route exact path="/locations">
+                <Route path="/locations">
                     <LocationList />
                 </Route>
             </LocationProvider>
 
             {/* RENDER PRODUCTS */}
             <ProductProvider>
-                <Route exact path="/products">
+                <Route path="/products">
                     <ProductList />
                 </Route>
             </ProductProvider>
@@ -38,7 +38,7 @@ export const ApplicationViews = () => {
                         <EmployeeList />
                     </Route>
 
-                    <Route exact path="/employees/create">
+                    <Route path="/employees/create">
                         <EmployeeForm />
                     </Route>
                 </LocationProvider>
