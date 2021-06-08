@@ -35,7 +35,7 @@ export const EmployeeForm = () => {
         event.preventDefault()
 
         const locationId = parseInt(employee.locationId)
-        const hourlyRate = parseInt(employee.hourlyRate)
+        const hourlyRate = parseFloat(employee.hourlyRate)
         const manager = employee.manager
         const fullTime = employee.fullTime
 

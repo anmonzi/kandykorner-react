@@ -6,7 +6,7 @@ import "./Employee.css"
 
 
 export const EmployeeList = () => {
-    const { employees, getEmployees } = useContext(EmployeeContext)
+    const { employees, getEmployees, removeEmployee } = useContext(EmployeeContext)
     const history = useHistory()
 
     useEffect(() => {
@@ -28,20 +28,20 @@ export const EmployeeList = () => {
                     employees.map(employee =>
                         <div className="employee" key={employee.id} id={`employee--${employee.id}`}>
                             <div className="employee__name">
-                                Employee Name: { employee.name } 
+                                <b>Employee Name:</b> { employee.name } 
                             </div>
                             <div className="employee__location">
-                                Works at: { employee.location.name }
+                                <b>Works at:</b> { employee.location.name }
                             </div>
                             <div className="employee__position">
-                                Is a manager: { 
+                                <b>Is a manager:</b> { 
                                     employee.manager
                                     ? "Yes"
                                     : "No"
                                     }
                             </div>
                             <div className="employee__fullTime">
-                                Works Full-Time: { 
+                                <b>Works Full-Time:</b> { 
                                     employee.fullTime
                                     ? "Yes"
                                     : "No"
@@ -50,6 +50,11 @@ export const EmployeeList = () => {
                             <div className="employee__hourlyRate">
                                 { employee.name } makes ${ employee.hourlyRate } an hour
                             </div>
+                            <br></br>
+                            <button onClick={() => {
+                                removeEmployee(employee.id)
+                                history.push("/employees")
+                            }}>Release Employee</button>
                         </div>
                         )
                 }
