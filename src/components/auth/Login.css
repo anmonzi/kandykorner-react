@@ -48,7 +48,8 @@ fieldset {
 
 .form__img {
     background-image: url(CandyBars.png);
-    background-position-x: right;
+    background-position-x: center;
+    margin-top: 8rem;
     z-index: 1;
     min-height: 25rem;
     min-width: 45rem;
