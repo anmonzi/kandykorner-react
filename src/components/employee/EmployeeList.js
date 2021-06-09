@@ -18,7 +18,7 @@ export const EmployeeList = () => {
         <>
             <h1 className="employees__title">Current Employees</h1>
             <div className="employee_flex">
-                <button className="employee__button" onClick={() => history.push("/employees/create")}>
+                <button className="add__button" onClick={() => history.push("/employees/create")}>
                     Add Employee
                 </button>
             </div>
@@ -51,10 +51,10 @@ export const EmployeeList = () => {
                                 { employee.name } makes ${ employee.hourlyRate } an hour
                             </div>
                             <br></br>
-                            <button onClick={() => {
+                            <button className="fire__button" onClick={() => {
                                 removeEmployee(employee.id)
                                 history.push("/employees")
-                            }}>Release Employee</button>
+                            }}>Fire Employee</button>
                         </div>
                         )
                 }

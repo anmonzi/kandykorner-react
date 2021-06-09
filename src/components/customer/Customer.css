@@ -1,17 +1,17 @@
 .customers {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   
   .customer {
-      flex-basis: 45%;
+      flex-basis: 20%;
       margin: 1em;
       padding: 1em;
       border: 1px solid goldenrod;
   }
 
   .customers__title {
-      margin-top: 3rem;
+      margin-top: 2rem;
       text-align: center;
   }

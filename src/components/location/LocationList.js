@@ -20,10 +20,10 @@ export const LocationList = () => {
                         return (
                             <div className="location" key={location.id} id={`location--${location.id}`}>
                                 <div className="location__name">
-                                    Name: {location.name}
+                                    <b>Name:</b> {location.name}
                                 </div>
                                 <div className="location__address">
-                                    Address: {location.address}
+                                    <b>Address:</b> {location.address}
                                 </div>
                             </div>
                         )

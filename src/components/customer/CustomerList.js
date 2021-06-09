@@ -26,10 +26,10 @@ export const CustomerList = () => {
                     customers.map(customer => 
                         <div className="customer" key={customer.id} id={`customer--${customer.id}`}>
                             <div className="customer__name">
-                                Customer Name: {customer.name}
+                                <b>Customer Name:</b> {customer.name}
                             </div>
                             <div className="customer__email">
-                                Email: {customer.email}
+                                <b>Email:</b> {customer.email}
                             </div>
                             <div className="customer__email">
                                 {customer.name} has purchased {customer.customerCandys.length} candies.
