@@ -5,5 +5,6 @@ This project was deployed on Heroku, to view use this [Link!](https://kandy-korn
 ## Technologies
 
 1. React
-2. CSS
-3. HTML
+2. Javascript
+3. CSS
+4. HTML
