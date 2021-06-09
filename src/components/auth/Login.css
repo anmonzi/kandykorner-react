@@ -46,7 +46,8 @@ fieldset {
     text-align: center;
 }
 
-.form--login {
+.form__img {
+    background-image: url(CandyBars.png);
     background-position-x: right;
     z-index: 1;
     min-height: 25rem;
