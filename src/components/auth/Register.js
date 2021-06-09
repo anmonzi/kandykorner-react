@@ -74,6 +74,7 @@ export const Register = (props) => {
                     <button type="submit"> Sign in </button>
                 </fieldset>
             </form>
+            <section className="form__img"></section>
         </main>
     )
 }
