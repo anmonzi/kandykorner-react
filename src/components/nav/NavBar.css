@@ -3,10 +3,29 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     padding: 0;
+    background: #FF6392;
+    padding: 1rem;
+    margin-top: 0;
 }
 
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
     text-align: center;
+    padding-bottom: .5rem;
+
+}
+
+.navbar__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.navbar__link:hover {
+    color:#FFE45E;
+}
+
+.navbar__link:active {
+    color: #f9f9f9;
 }

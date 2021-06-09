@@ -48,13 +48,16 @@ export const EmployeeList = () => {
                                     }
                             </div>
                             <div className="employee__hourlyRate">
-                                { employee.name } makes ${ employee.hourlyRate } an hour
+                                { employee.name } makes ${ employee.hourlyRate.toFixed(2) } an hour
                             </div>
                             <br></br>
-                            <button className="fire__button" onClick={() => {
-                                removeEmployee(employee.id)
-                                history.push("/employees")
-                            }}>Fire Employee</button>
+                            <div className="employee__buttons">
+                                <button className="employeeFire__button" onClick={() => {
+                                    removeEmployee(employee.id)
+                                    history.push("/employees")}}>Fire Employee</button>
+                                <button className="employeeEdit__button" onClick={() =>
+                                    history.push(`/employees/edit/${employee.id}`)}>Edit Employee</button>
+                            </div>
                         </div>
                         )
                 }

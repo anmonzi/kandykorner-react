@@ -8,3 +8,14 @@
     text-align: center;
     font-size: 1rem;
 }
+
+.landing__page {
+  background-image: url(kitkat.png);
+  background-position-x: center;
+  margin-top: 5rem;
+  min-height: 25rem;
+  min-width: 45rem;
+  background-color: hsla(0,0%,100%,0.40);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+}
