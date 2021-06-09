@@ -7,13 +7,13 @@ export const EmployeeProvider = (props) => {
     const [employees, setEmployee] = useState([])
 
     const getEmployees = () => {
-        return fetch("http://localhost:8088/employees?_expand=location")
+        return fetch("https://kandy-korner-48-api.herokuapp.com/employees?_expand=location")
         .then(res => res.json())
         .then((data) => setEmployee(data))
     }
 
     const addEmployee = employeeObj => {
-        return fetch("http://localhost:8088/employees", {
+        return fetch("https://kandy-korner-48-api.herokuapp.com/employees", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -24,12 +24,12 @@ export const EmployeeProvider = (props) => {
     }
 
     const getEmployeeById = employeeId => {
-        return fetch(`http://localhost:8088/employees/${employeeId}`)
+        return fetch(`https://kandy-korner-48-api.herokuapp.com/employees/${employeeId}`)
         .then(res => res.json())
     }
 
     const updateEmployee = employee => {
-        return fetch(`http://localhost:8088/employees/${employee.id}`, {
+        return fetch(`https://kandy-korner-48-api.herokuapp.com/employees/${employee.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -41,7 +41,7 @@ export const EmployeeProvider = (props) => {
 
 
     const removeEmployee = employeeId => {
-        return fetch(`http://localhost:8088/employees/${employeeId}`, {
+        return fetch(`https://kandy-korner-48-api.herokuapp.com/employees/${employeeId}`, {
             method: "DELETE"
         })
         .then(getEmployees)
