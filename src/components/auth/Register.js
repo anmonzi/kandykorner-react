@@ -23,7 +23,7 @@ export const Register = (props) => {
         existingUserCheck()
             .then((userExists) => {
                 if (!userExists) {
-                    fetch("http://localhost:8088/customers", {
+                    fetch("https://kandy-korner-48-api.herokuapp.com/customers", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
