@@ -4,8 +4,7 @@ This project was deployed on Heroku, to view use this [Link!](https://kandy-korn
 
 ## Technologies
 
-1. React
-2. Javascript
+1. Reactjs
 3. JSON
 4. CSS
 5. HTML
